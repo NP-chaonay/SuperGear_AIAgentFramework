@@ -1,9 +1,16 @@
 # SuperGear_AIAgentFramework
 AI Agent Framework that opens your eyes by our interesting features; written in Python, intended to support various model backend.
 
-## Proposed Features
-```
-- different AI entity that have different context/customInstruction/assitantMsg/andSoOn ... AI entity have differnet model (can be cloud/local or Entities Orcehstrator (see below) )
+## Drafting Specification
+### Setup
+1) User put Python Code that connect Model Backend into our system
+2) Open our frontend
+3) Add/Select Workspace (separating configuration/chat/data)
+4) Add/Select Model Backend to use (can be local/cloud... can be multiple)
+5) Let user to enabling/and setup Entity Orchestrator (useful for limited resource local model or limited cost of cloud model)
+-) Our system: loaded model can be shared by Entity/EO/workspace but in FIFO policy... in case you want to enforce different switching policy... enabling Entiity Orchestrator and let the EO (decision tree fixed rule + LLM editing rule + LLM manage directly) manage
+6) Add Agent and choose what Entity/EO (you may want to use EO instead I suggest lmao) to tie
+7) <TBA>
 
 - if user want to let AI entiities use same session of loaded model... user must implment Entities Orchestrator (The leader of all entities) that control who (ai entities) will got moment to use that model ... in case your computer does not have much resource for simultaneously running model for each entities and not want to pay for cloud AI
 
